@@ -1,0 +1,21 @@
+def extend_file(file_name, additional_data):
+    try:
+        # Open the file in read mode
+        with open(file_name, 'r') as file:
+            existing_data = file.read()
+
+        # Open the file in append mode to add additional data
+        with open(file_name, 'a') as file:
+            # Write the additional data to the file
+            file.write(additional_data)
+
+        print("File extension successful.")
+
+    except FileNotFoundError:
+        print("File not found.")
+
+# Example usage
+file_name = "example.txt"
+additional_data = "This is additional data."
+
+extend_file(file_name, additional_data)
