@@ -1,0 +1,26 @@
+def convert_into_int(m,n):
+    new_list=[]
+    for item in range(m):
+        num_list=list(map(int,(input().split())))
+        new_list.append(num_list)
+    return new_list
+
+def convert_into_sorted_list(int_list):
+    item_list=[]
+    for i in range(m):
+        for j in range(n):
+            item_list.append(int_list[i][j])
+    return sorted(item_list)
+
+m,n=input().split()
+m,n=int(m),int(n)
+int_list=convert_into_int(m,n)
+sorted_list=convert_into_sorted_list(int_list)
+
+x=0
+for row in range(m):
+    y=""
+    for col in range(n):
+        y+=str(sorted_list[x]) + " "
+        x=x+1 
+    print(y)
